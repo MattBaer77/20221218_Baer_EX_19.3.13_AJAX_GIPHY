@@ -48,11 +48,11 @@ button{
 
 #remove{
     display: inline;
-    background-color: darkgray;
+    background-color: orange;
 }
 
 #search{
-    background-color: orange;
+    background-color: darkgrey;
 }
 
 img{
