@@ -36,7 +36,7 @@ function randomIndexGenerator(length){
 // Accepts (a) search term(s) to pass along. Makes API call to GIPHY Search Endpoint. Returns the url for the "fixed_height" version of a gif that is randomly selected from the default response of 50 gifs
 async function searchGif(searchTerm){
 
-    const res = await axios.get('http://api.giphy.com/v1/gifs/search', {params: {api_key: myKey, q: searchTerm,}});
+    const res = await axios.get('https://api.giphy.com/v1/gifs/search', {params: {api_key: myKey, q: searchTerm,}});
     const randomIndex = randomIndexGenerator(res.data.data.length);
     return res['data']['data'][randomIndex]['images']['fixed_height']['url']
 
