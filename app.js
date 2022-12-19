@@ -37,11 +37,7 @@ function randomIndexGenerator(length){
 async function searchGif(searchTerm){
 
     const res = await axios.get('http://api.giphy.com/v1/gifs/search', {params: {api_key: myKey, q: searchTerm,}});
-    // console.log(res);
-    // console.log(res.data.data.length);
     const randomIndex = randomIndexGenerator(res.data.data.length);
-    // console.log(randomIndex);
-    // console.log(res['data']['data'][randomIndex]['images']['fixed_height']['url']);
     return res['data']['data'][randomIndex]['images']['fixed_height']['url']
 
 }
@@ -51,7 +47,6 @@ function addGifToPage(gifUrl){
 
     const newGif = document.createElement('img')
     newGif.src = gifUrl
-    console.dir(newGif);
     gifDiv.append(newGif)
 
 }
@@ -64,9 +59,7 @@ function addGifToPage(gifUrl){
 searchForm.addEventListener('submit', async function(e){
 
     e.preventDefault()
-    console.log(searchLine['value']);
     const gifUrl = await searchGif(searchLine['value']);
-    console.log(gifUrl);
     searchLine['value'] = ''
     addGifToPage(gifUrl);
 

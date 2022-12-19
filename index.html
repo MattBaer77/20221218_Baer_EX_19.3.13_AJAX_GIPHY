@@ -4,18 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <title>Giphy Party!</title>
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
 
   <H1>GIPHY PARTY!!!</H1>
 
-  <form action="" id="giphy-search">
-    <input type="text" placeholder="Enter a search term" id="search-bar">
-    <button id="search">Search Giphy!</button>
-  </form>
-  <button id="remove">Remove Images</button>
+  <div id="search-block">
+    <form action="" id="giphy-search">
+      <input type="text" placeholder="Enter a search term" id="search-bar">
+      <button id="search">Search Giphy!</button>
+    </form>
+    <button id="remove">Remove Images</button>
+  </div>
+
+  <hr>
+
   <div id="gifs"></div>
+
+  <div id="attribution">
+    <img src="Giphy Attribution Marks/Static Logos/Small/Dark Backgrounds/PoweredBy_200px-Black_HorizText.png" alt="Powered By Giphy" id="giphyattribution">
+  </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.js"></script>
